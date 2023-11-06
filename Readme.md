@@ -12,8 +12,4 @@ An online order management system for cafes and restaurants that allows customer
 - Hosting of photos on external resources.
 - Telegram-notifications for restourant
 
-## Version 1.0
-### MVP + Features:
-- User registration and restaurant account creation.
-- Configuration of categories and recommendations.
 
