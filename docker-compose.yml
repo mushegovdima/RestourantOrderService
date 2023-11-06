@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  #client:
+  #  image: ${DOCKER_REGISTRY-}eat-client
+  #  build:
+  #    context: ./Eat.Api/client-app
+  #    dockerfile: Dockerfile
+
+  eat.api:
+    image: ${DOCKER_REGISTRY-}eat-api
+    build:
+      context: .
+      dockerfile: Eat.Api/Dockerfile
+
+  eat.orderservice:
+    image: ${DOCKER_REGISTRY-}eat-order
+    build:
+      context: .
+      dockerfile: Eat.OrderService/Dockerfile
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "4000:4000"
+      - "4001:4001"
+
+
+

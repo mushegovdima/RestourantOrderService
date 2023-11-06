@@ -1,0 +1,5 @@
+{
+    "api": "http://localhost:4000",
+    "authService": "http://localhost:5135",
+    "orderService": "http://localhost:4001"
+}
